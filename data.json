@@ -1,0 +1,36 @@
+{
+    "last_updated": "2026-04-17 11:46:14",
+    "news": [
+        {
+            "title": "Nach der Fischer-Entlassung – SIHF gesteht: «Ersteinschätzung war zu kurz gegriffen»",
+            "date": "Fri, 17 Apr 2026",
+            "image": "https://www.srf.ch/static/cms/images//320ws/2fbfa93.webp"
+        },
+        {
+            "title": "Die Causa Fischer aus PR-Sicht – Warum Fischer den Skandal nicht überstanden hat",
+            "date": "Thu, 16 Apr 2026",
+            "image": "https://www.srf.ch/static/cms/images//320ws/b5fcca5.webp"
+        },
+        {
+            "title": "Entlassung von Patrick Fischer – «Seine Glaubwürdigkeit hat extrem gelitten»",
+            "date": "Thu, 16 Apr 2026",
+            "image": "https://www.srf.ch/static/cms/images//320ws/4435c8.webp"
+        }
+    ],
+    "schedule": [
+        {
+            "team1": "SUI",
+            "team2": "SWE",
+            "date": "15. Mai 2026",
+            "time": "20:20",
+            "venue": "Swiss Life Arena, Zürich"
+        },
+        {
+            "team1": "CAN",
+            "team2": "USA",
+            "date": "16. Mai 2026",
+            "time": "16:20",
+            "venue": "BCF Arena, Fribourg"
+        }
+    ]
+}

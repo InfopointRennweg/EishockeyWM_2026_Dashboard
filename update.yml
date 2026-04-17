@@ -1,0 +1,41 @@
+name: Update IIHF Data
+
+on:
+  schedule:
+    # Zeiten in UTC! (Schweiz ist UTC+1 oder UTC+2 im Sommer)
+    # 05:30 UTC = 07:30 MESZ (Sommerzeit)
+    # 11:30 UTC = 13:30 MESZ (Sommerzeit)
+    - cron: '30 5 * * *'
+    - cron: '30 11 * * *'
+  workflow_dispatch: # Erlaubt manuelles Starten über die GitHub Website
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    # Notwendig, damit der Bot ins Repo pushen darf
+    permissions:
+      contents: write
+
+    steps:
+    - name: Repo auschecken
+      uses: actions/checkout@v3
+
+    - name: Python einrichten
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Abhängigkeiten installieren
+      run: pip install requests beautifulsoup4
+
+    - name: Scraper ausführen
+      run: python scraper.py
+
+    - name: Neue Daten committen und pushen
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add data.json
+        git commit -m "Automatisches Update der IIHF Daten" || exit 0
+        git push

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>IIHF WM 2026 Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --panel-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-red: #ef4444; /* IIHF/Schweiz Rot */
+            --accent-blue: #3b82f6; /* Eisblau */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(0,0,0,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--accent-red); }
+
+        .time-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        /* 2-Spalten Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .column {
+            background: var(--panel-bg);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-scroll {
+            flex: 1;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+        .content-scroll::-webkit-scrollbar { display: none; } /* Chrome */
+
+        /* News Item */
+.news-item {
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-red);
+            display: flex; /* Neues Layout für Bild + Text */
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .news-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+            background-color: rgba(255,255,255,0.05); /* Platzhalter-Hintergrund */
+        }
+        
+        .news-content {
+            flex: 1;
+        }
+        .news-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .news-date { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Schedule Item */
+        .schedule-item { border-left-color: var(--accent-blue); display: flex; justify-content: space-between; align-items: center;}
+        .teams { font-weight: 600; font-size: 1.2rem; }
+        .match-info { text-align: right; }
+        .match-time { color: var(--accent-red); font-weight: bold; }
+        .match-venue { font-size: 0.8rem; color: var(--text-muted); }
+
+        .loading { text-align: center; color: var(--text-muted); margin-top: 2rem; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">IIHF WM <span>2026</span> Schweiz</div>
+        <div class="time-info">
+            <div id="clock" style="font-size: 1.2rem; font-weight: bold; color: #fff;">00:00:00</div>
+            <div id="next-update">Nächstes Update berechnen...</div>
+        </div>
+    </header>
+
+    <div class="dashboard-grid">
+        <div class="column">
+            <h2>📰 Aktuelle News</h2>
+            <div class="content-scroll" id="news-container">
+                <div class="loading">Lade News...</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>🏒 Spielplan</h2>
+            <div class="content-scroll" id="schedule-container">
+                <div class="loading">Lade Spielplan...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Lade die JSON Daten ---
+        async function fetchDashboardData() {
+            try {
+                // Hängt einen Zeitstempel an, um den Wix-Cache auszutricksen
+                const response = await fetch('data.json?t=' + new Date().getTime());
+                if (!response.ok) throw new Error('Daten konnten nicht geladen werden');
+                const data = await response.json();
+                
+                renderNews(data.news);
+                renderSchedule(data.schedule);
+            } catch (error) {
+                console.error(error);
+                document.getElementById('news-container').innerHTML = '<div class="loading">Fehler beim Laden der Daten. Bitte später prüfen.</div>';
+                document.getElementById('schedule-container').innerHTML = '';
+            }
+        }
+
+        // --- 2. HTML Rendern ---
+function renderNews(newsArray) {
+            const container = document.getElementById('news-container');
+            if(!newsArray || newsArray.length === 0) {
+                container.innerHTML = '<div class="loading">Keine News verfügbar.</div>';
+                return;
+            }
+            container.innerHTML = newsArray.map(item => {
+                // Wenn ein Bild da ist, zeige es. Wenn es beim Laden kaputt geht (onerror), zeige ein Emoji.
+                // Wenn gar kein Bild-Link gefunden wurde, zeige direkt das Emoji.
+                const imgHtml = item.image 
+                    ? `<img src="${item.image}" class="news-image" alt="News" onerror="this.outerHTML='<div class=\\'news-image\\' style=\\'display:flex; align-items:center; justify-content:center; font-size:2rem; background:rgba(255,255,255,0.05)\\'>🏒</div>'">` 
+                    : `<div class="news-image" style="display:flex; align-items:center; justify-content:center; font-size:2rem; background:rgba(255,255,255,0.05)">🏒</div>`;
+                
+                return `
+                <div class="news-item">
+                    ${imgHtml}
+                    <div class="news-content">
+                        <div class="news-date">${item.date}</div>
+                        <div class="news-title">${item.title}</div>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        function renderSchedule(scheduleArray) {
+            const container = document.getElementById('schedule-container');
+            if(!scheduleArray || scheduleArray.length === 0) {
+                container.innerHTML = '<div class="loading">Keine Spiele gefunden.</div>';
+                return;
+            }
+            container.innerHTML = scheduleArray.map(game => `
+                <div class="schedule-item">
+                    <div class="teams">${game.team1} vs. ${game.team2}</div>
+                    <div class="match-info">
+                        <div class="match-time">${game.date} - ${game.time}</div>
+                        <div class="match-venue">${game.venue}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- 3. Live-Uhr ---
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString('de-CH');
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // --- 4. Update-Logik (07:30 und 13:30) ---
+        function scheduleNextReload() {
+            const now = new Date();
+            
+            // Definiere die beiden Zielzeiten von heute
+            const targetMorning = new Date(now); targetMorning.setHours(7, 30, 0, 0);
+            const targetAfternoon = new Date(now); targetAfternoon.setHours(13, 30, 0, 0);
+
+            let nextUpdate;
+
+            if (now < targetMorning) {
+                nextUpdate = targetMorning;
+            } else if (now < targetAfternoon) {
+                nextUpdate = targetAfternoon;
+            } else {
+                // Nächstes Update ist morgen früh um 07:30
+                nextUpdate = new Date(targetMorning);
+                nextUpdate.setDate(nextUpdate.getDate() + 1);
+            }
+
+            const msUntilUpdate = nextUpdate.getTime() - now.getTime();
+            
+            // Zeige an, wann das nächste Update passiert
+            document.getElementById('next-update').textContent = `Nächstes Update: ${nextUpdate.toLocaleTimeString('de-CH', {hour: '2-digit', minute:'2-digit'})} Uhr`;
+
+            // Seite nach Ablauf der Zeit neu laden
+            setTimeout(() => {
+                window.location.reload(true);
+            }, msUntilUpdate);
+        }
+
+        // Initialer Start
+        fetchDashboardData();
+        scheduleNextReload();
+    </script>
+</body>
+</html>
