@@ -130,18 +130,28 @@ def scrape_schedule():
             })
             
         # 4. Sortieren und Einteilen
-        # Schweiz-Spiele
-        swiss_games = [g for g in all_games if "schweiz" in g["team1"].lower() or "schweiz" in g["team2"].lower()]
+        # Spiele von heute (aktueller Tag der Ausführung)
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        today_games = [g for g in all_games if g.get("full_date", "").startswith(today_str)]
         
-        # Sortiere Schweiz-Spiele chronologisch
-        swiss_games.sort(key=lambda x: x.get("full_date", ""))
-        
-        # Die nächsten Schweizer Spiele: Zustand nicht "Finished"
-        upcoming_swiss = [g for g in swiss_games if g["state"] != "Finished"]
-        
-        # Wenn alle Schweizer Spiele bereits beendet sind (z.B. Turnierende), zeigen wir einfach alle
-        if not upcoming_swiss:
-            upcoming_swiss = swiss_games
+        # Falls es heute keine Spiele gibt (z.B. vor dem Turnier oder an Ruhetagen), 
+        # suchen wir nach dem nächsten Tag, an dem Spiele stattfinden, damit der Bildschirm nicht leer ist!
+        if not today_games:
+            # Finde alle zukünftigen Spiele
+            future_games = [g for g in all_games if g.get("full_date", "") > today_str]
+            if future_games:
+                # Finde das Datum des nächsten Spieltags
+                next_date_str = min(g.get("full_date", "")[:10] for g in future_games)
+                today_games = [g for g in all_games if g.get("full_date", "").startswith(next_date_str)]
+            else:
+                # Falls das Turnier vorbei ist, zeige den allerletzten Spieltag
+                all_dates = sorted(list(set(g.get("full_date", "")[:10] for g in all_games if g.get("full_date", ""))))
+                if all_dates:
+                    last_date_str = all_dates[-1]
+                    today_games = [g for g in all_games if g.get("full_date", "").startswith(last_date_str)]
+                    
+        # Sortiere heutige Spiele chronologisch
+        today_games.sort(key=lambda x: x.get("full_date", ""))
             
         # Abgeschlossene Spiele (Resultate)
         past_results = [g for g in all_games if g["state"] == "Finished"]
@@ -149,7 +159,7 @@ def scrape_schedule():
         past_results.sort(key=lambda x: x.get("full_date", ""), reverse=True)
         
         return {
-            "swiss_games": upcoming_swiss,
+            "today_games": today_games,
             "past_results": past_results
         }
         
@@ -157,11 +167,9 @@ def scrape_schedule():
         print(f"Fehler beim Laden des Spielplans: {e}")
         # Sichere Rückfalldaten, falls die SRF/SwissTxt-Schnittstelle jemals ausfallen sollte
         return {
-            "swiss_games": [
-                {"team1": "USA", "team1_country": "USA", "team2": "Schweiz", "team2_country": "SUI", "date_str": "Fr, 15. Mai", "time": "20:20", "venue": "Swiss Life Arena, Zürich", "state": "Planned", "score": None},
-                {"team1": "Schweiz", "team1_country": "SUI", "team2": "Lettland", "team2_country": "LAT", "date_str": "Sa, 16. Mai", "time": "20:20", "venue": "Swiss Life Arena, Zürich", "state": "Planned", "score": None},
-                {"team1": "Deutschland", "team1_country": "GER", "team2": "Schweiz", "team2_country": "SUI", "date_str": "Mo, 18. Mai", "time": "20:20", "venue": "Swiss Life Arena, Zürich", "state": "Planned", "score": None},
-                {"team1": "Österreich", "team1_country": "AUT", "team2": "Schweiz", "team2_country": "SUI", "date_str": "Mi, 20. Mai", "time": "16:20", "venue": "Swiss Life Arena, Zürich", "state": "Planned", "score": None}
+            "today_games": [
+                {"team1": "Finnland", "team1_country": "FIN", "team2": "Deutschland", "team2_country": "GER", "date_str": "Fr, 15. Mai", "time": "16:20", "venue": "Swiss Life Arena, Zürich", "state": "Planned", "score": None, "full_date": "2026-05-15T16:20:00"},
+                {"team1": "USA", "team1_country": "USA", "team2": "Schweiz", "team2_country": "SUI", "date_str": "Fr, 15. Mai", "time": "20:20", "venue": "Swiss Life Arena, Zürich", "state": "Planned", "score": None, "full_date": "2026-05-15T20:20:00"}
             ],
             "past_results": [
                 {"team1": "Finnland", "team1_country": "FIN", "team2": "Deutschland", "team2_country": "GER", "date_str": "Fr, 15. Mai", "time": "16:20", "venue": "Swiss Life Arena, Zürich", "state": "Finished", "score": "3 : 2"},

@@ -1,19 +1,31 @@
 {
-    "last_updated": "2026-05-13 12:32:01",
+    "last_updated": "2026-05-13 13:45:34",
     "news": [
         {
-            "title": "Kader für die Heim-WM fix - Das Team für die Gold-Mission steht",
-            "date": "12.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/6ebd8e9.webp"
+            "title": "Rückblick auf letzte Heim-WM - 2009: Grosse Euphorie, grosses Ziel, grosse Enttäuschung",
+            "date": "13.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/6b0f87.webp"
         },
         {
-            "title": "Endlich Gold beim Jubiläum? - Josi: «WM-Titel ist das Ziel, das ist kein Geheimnis»",
-            "date": "11.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/854aa3.webp"
+            "title": "Schweiz 2024 und 2025 im Final - WM-Gold lag bereit, doch Pastrnak und Thompson legten Veto ein",
+            "date": "13.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/f5dbe10.webp"
         }
     ],
     "schedule": {
-        "swiss_games": [
+        "today_games": [
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "Deutschland",
+                "team2_country": "GER",
+                "date_str": "Fr, 15. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-15T16:20:00"
+            },
             {
                 "team1": "USA",
                 "team1_country": "USA",
@@ -25,78 +37,6 @@
                 "state": "Planned",
                 "score": null,
                 "full_date": "2026-05-15T20:20:00"
-            },
-            {
-                "team1": "Schweiz",
-                "team1_country": "SUI",
-                "team2": "Lettland",
-                "team2_country": "LAT",
-                "date_str": "Sa, 16. Mai",
-                "time": "20:20",
-                "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-16T20:20:00"
-            },
-            {
-                "team1": "Deutschland",
-                "team1_country": "GER",
-                "team2": "Schweiz",
-                "team2_country": "SUI",
-                "date_str": "Mo, 18. Mai",
-                "time": "20:20",
-                "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-18T20:20:00"
-            },
-            {
-                "team1": "Österreich",
-                "team1_country": "AUT",
-                "team2": "Schweiz",
-                "team2_country": "SUI",
-                "date_str": "Mi, 20. Mai",
-                "time": "16:20",
-                "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-20T16:20:00"
-            },
-            {
-                "team1": "Schweiz",
-                "team1_country": "SUI",
-                "team2": "Grossbritannien",
-                "team2_country": "GBR",
-                "date_str": "Do, 21. Mai",
-                "time": "20:20",
-                "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-21T20:20:00"
-            },
-            {
-                "team1": "Schweiz",
-                "team1_country": "SUI",
-                "team2": "Ungarn",
-                "team2_country": "HUN",
-                "date_str": "Sa, 23. Mai",
-                "time": "16:20",
-                "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-23T16:20:00"
-            },
-            {
-                "team1": "Schweiz",
-                "team1_country": "SUI",
-                "team2": "Finnland",
-                "team2_country": "FIN",
-                "date_str": "Di, 26. Mai",
-                "time": "20:20",
-                "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-26T20:20:00"
             }
         ],
         "past_results": []
