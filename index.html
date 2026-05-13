@@ -195,19 +195,13 @@
     </header>
 
     <div class="dashboard-grid">
+        <!-- Spalte 1 (links): News + Resultate -->
         <div class="column">
-            <h2>📰 Aktuelle News <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: none; font-weight: normal; margin-left: auto;">(srf.ch/sport)</span></h2>
-            <div class="content-scroll" id="news-container">
-                <div class="loading">Lade News...</div>
-            </div>
-        </div>
-
-        <div class="column">
-            <!-- Upper Half: Schweiz-Spiele -->
+            <!-- Upper Half: News -->
             <div class="schedule-half">
-                <h2>🇨🇭 Nächste Schweiz-Spiele <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: none; font-weight: normal; margin-left: auto;">(iihf.com)</span></h2>
-                <div class="content-scroll" id="swiss-games-container">
-                    <div class="loading">Lade Schweiz-Spiele...</div>
+                <h2>📰 Aktuelle News <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: none; font-weight: normal; margin-left: auto;">(srf.ch/sport)</span></h2>
+                <div class="content-scroll" id="news-container">
+                    <div class="loading">Lade News...</div>
                 </div>
             </div>
 
@@ -220,6 +214,14 @@
                 <div class="content-scroll" id="past-results-container">
                     <div class="loading">Lade Resultate...</div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Spalte 2 (rechts): Schweiz-Spiele -->
+        <div class="column">
+            <h2>🇨🇭 Nächste Schweiz-Spiele <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: none; font-weight: normal; margin-left: auto;">(iihf.com)</span></h2>
+            <div class="content-scroll" id="swiss-games-container">
+                <div class="loading">Lade Schweiz-Spiele...</div>
             </div>
         </div>
     </div>
@@ -310,7 +312,7 @@ function renderNews(newsArray) {
                 container.innerHTML = '<div class="loading">Keine Resultate vorhanden.</div>';
                 return;
             }
-            container.innerHTML = gamesArray.slice(0, 15).map(game => { // Zeige maximal 15 Resultate
+            container.innerHTML = gamesArray.slice(0, 5).map(game => { // Zeige maximal 5 Resultate für Infoscreen
                 const isSwissMatch = game.team1 === 'Schweiz' || game.team2 === 'Schweiz';
                 const borderClass = isSwissMatch ? 'swiss-match' : '';
                 const scoreHtml = game.score 

@@ -58,8 +58,8 @@ def scrape_news():
                 "image": image_url
             })
             
-            # Wir stoppen nach exakt 3 Artikeln für dein perfektes 3er-Layout
-            if len(news_list) >= 3:
+            # Wir stoppen nach exakt 2 Artikeln für dein perfektes Layout
+            if len(news_list) >= 2:
                 break
                 
         if not news_list:
