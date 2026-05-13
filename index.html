@@ -11,19 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --panel-bg: rgba(255, 255, 255, 0.05);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-red: #ef4444; /* IIHF/Schweiz Rot */
-            --accent-blue: #3b82f6; /* Eisblau */
+            --bg-light: linear-gradient(135deg, #fdfbfa 0%, #f9ebeb 100%);
+            --panel-bg: rgba(255, 255, 255, 0.85);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-red: #da291c; /* Offizielles Schweizer Rot */
+            --accent-blue: #0284c7; /* Schönes Eisblau für Kontraste */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
+            background: var(--bg-light);
             color: var(--text-main);
             height: 100vh;
             overflow: hidden;
@@ -37,8 +37,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background: rgba(0,0,0,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(218, 41, 28, 0.15);
+            backdrop-filter: blur(8px);
         }
 
         .logo {
@@ -46,6 +47,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: #0f172a;
         }
 
         .logo span { color: var(--accent-red); }
@@ -72,12 +74,14 @@
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(218, 41, 28, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(218, 41, 28, 0.05);
         }
 
         h2 {
             font-size: 1.2rem;
-            color: var(--accent-blue);
+            color: var(--accent-red);
             margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -94,15 +98,25 @@
         .content-scroll::-webkit-scrollbar { display: none; } /* Chrome */
 
         /* News Item */
-.news-item {
-            background: rgba(0,0,0,0.2);
+        .news-item {
+            background: rgba(255, 255, 255, 0.65);
             border-radius: 8px;
             padding: 1rem;
             margin-bottom: 1rem;
             border-left: 4px solid var(--accent-red);
-            display: flex; /* Neues Layout für Bild + Text */
+            display: flex; /* Layout für Bild + Text */
             gap: 1rem;
             align-items: center;
+            border-top: 1px solid rgba(0,0,0,0.02);
+            border-right: 1px solid rgba(0,0,0,0.02);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(218, 41, 28, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(218, 41, 28, 0.05);
         }
 
         .news-image {
@@ -111,18 +125,39 @@
             object-fit: cover;
             border-radius: 6px;
             flex-shrink: 0;
-            background-color: rgba(255,255,255,0.05); /* Platzhalter-Hintergrund */
+            background-color: rgba(0,0,0,0.03); /* Platzhalter-Hintergrund */
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .news-content {
             flex: 1;
         }
-        .news-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .news-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: #0f172a; }
         .news-date { font-size: 0.8rem; color: var(--text-muted); }
 
         /* Schedule Item */
-        .schedule-item { border-left-color: var(--accent-blue); display: flex; justify-content: space-between; align-items: center;}
-        .teams { font-weight: 600; font-size: 1.2rem; }
+        .schedule-item { 
+            border-left: 4px solid var(--accent-blue); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.02);
+            border-right: 1px solid rgba(0,0,0,0.02);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .schedule-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.05);
+        }
+        
+        .teams { font-weight: 700; font-size: 1.2rem; color: #0f172a; }
         .match-info { text-align: right; }
         .match-time { color: var(--accent-red); font-weight: bold; }
         .match-venue { font-size: 0.8rem; color: var(--text-muted); }
@@ -136,7 +171,7 @@
     <header>
         <div class="logo">IIHF WM <span>2026</span> Schweiz</div>
         <div class="time-info">
-            <div id="clock" style="font-size: 1.2rem; font-weight: bold; color: #fff;">00:00:00</div>
+            <div id="clock" style="font-size: 1.2rem; font-weight: bold; color: #0f172a;">00:00:00</div>
             <div id="next-update">Nächstes Update berechnen...</div>
         </div>
     </header>
