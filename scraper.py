@@ -1,46 +1,59 @@
 import requests
-import xml.etree.ElementTree as ET
+from bs4 import BeautifulSoup
 import json
 from datetime import datetime
 import re
 
-# Der offizielle, stabile SRF Sport RSS-Feed
-RSS_URL = "https://www.srf.ch/sport/bnf/rss/718"
+# Die offizielle SRF Eishockey WM News-Seite
+NEWS_URL = "https://www.srf.ch/sport/eishockey/wm"
 
 def scrape_news():
     try:
-        # 1. Feed ganz legal herunterladen (Türsteher ignorieren das!)
-        response = requests.get(RSS_URL)
+        # 1. HTML der SRF WM Seite herunterladen
+        response = requests.get(NEWS_URL)
         response.raise_for_status() 
         
-        # 2. XML-Daten auslesen
-        root = ET.fromstring(response.content)
+        # 2. BeautifulSoup Parser initialisieren
+        soup = BeautifulSoup(response.text, 'html.parser')
         news_list = []
         
-        # 3. Alle News-Artikel (<item>) durchgehen
-        for item in root.findall('.//item'):
-            title = item.find('title').text if item.find('title') is not None else "Kein Titel"
+        # 3. Alle Teaser-Artikel auf der Seite finden
+        teasers = [a for a in soup.find_all('a') if a.get('href') and '/sport/eishockey/wm/' in a.get('href') and 'teaser' in a.get('class', [])]
+        
+        for t in teasers:
+            # Titel und Kicker (Über-Titel) auslesen und zusammensetzen
+            kicker_el = t.find(class_='teaser__kicker-text')
+            title_el = t.find(class_='teaser__title')
             
-            # Bilder im RSS-Feed auslesen (SRF packt diese meist ins <enclosure> Tag)
+            kicker = kicker_el.text.strip() if kicker_el else ""
+            title = title_el.text.strip() if title_el else ""
+            
+            full_title = f"{kicker} - {title}" if kicker and title else (title or kicker or "Kein Titel")
+            
+            # Bild URL auslesen (und absolut machen)
             image_url = ""
-            enclosure = item.find('enclosure')
-            if enclosure is not None and 'url' in enclosure.attrib:
-                image_url = enclosure.attrib['url']
-            else:
-                # Fallback: Manchmal sind sie im Text versteckt
-                desc = item.find('description')
-                if desc is not None and desc.text:
-                    img_match = re.search(r'src="([^"]+)"', desc.text)
-                    if img_match:
-                        image_url = img_match.group(1)
+            img = t.find('img')
+            if img is not None:
+                image_url = img.get('src') or img.get('data-src') or ""
+                if image_url.startswith('/'):
+                    image_url = f"https://www.srf.ch{image_url}"
             
-            # Datum formatieren (schneidet überflüssige Sekunden/Zeitzonen ab)
-            pub_date = item.find('pubDate').text if item.find('pubDate') is not None else "Aktuell"
-            if len(pub_date) > 16:
-                pub_date = pub_date[:16]
-                
+            # Veröffentlichungsdatum aus den Metadaten auslesen
+            pub_date = "Aktuell"
+            meta = t.find(class_='teaser__meta')
+            if meta is not None:
+                published_at = meta.get('data-teaser-meta-published-at')
+                if published_at:
+                    try:
+                        # Datumsteil (YYYY-MM-DD) extrahieren und formatieren
+                        date_str = published_at[:10]
+                        dt = datetime.strptime(date_str, "%Y-%m-%d")
+                        pub_date = dt.strftime("%d.%m.%Y")
+                    except:
+                        pass
+            
             news_list.append({
-                "title": title,
+                "title": full_title,
                 "date": pub_date,
                 "image": image_url
             })
@@ -50,12 +63,12 @@ def scrape_news():
                 break
                 
         if not news_list:
-            news_list = [{"title": "Keine News im Feed gefunden.", "date": datetime.now().strftime("%d.%m.%Y"), "image": ""}]
+            news_list = [{"title": "Keine News auf der SRF-Seite gefunden.", "date": datetime.now().strftime("%d.%m.%Y"), "image": ""}]
             
         return news_list
     except Exception as e:
-        print(f"Fehler beim RSS-Download: {e}")
-        return [{"title": "Fehler beim Laden des SRF-Feeds.", "date": "Aktuell", "image": ""}]
+        print(f"Fehler beim Web-Scraping: {e}")
+        return [{"title": "Fehler beim Laden der SRF-News.", "date": "Aktuell", "image": ""}]
 
 def scrape_schedule():
     # Da die IIHF-Website aktuell alles blockiert, setzen wir den Spielplan vorerst 
