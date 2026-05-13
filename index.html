@@ -136,6 +136,14 @@
         .news-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: #0f172a; }
         .news-date { font-size: 0.8rem; color: var(--text-muted); }
 
+        /* Schedule Half Split */
+        .schedule-half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
         /* Schedule Item */
         .schedule-item { 
             border-left: 4px solid var(--accent-blue); 
@@ -156,6 +164,15 @@
         .schedule-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(2, 132, 199, 0.05);
+        }
+
+        .schedule-item.swiss-match {
+            border-left: 4px solid var(--accent-red);
+            box-shadow: 0 4px 12px rgba(218, 41, 28, 0.02);
+        }
+
+        .schedule-item.swiss-match:hover {
+            box-shadow: 0 6px 16px rgba(218, 41, 28, 0.05);
         }
         
         .teams { font-weight: 700; font-size: 1.2rem; color: #0f172a; }
@@ -186,9 +203,23 @@
         </div>
 
         <div class="column">
-            <h2>🏒 Spielplan</h2>
-            <div class="content-scroll" id="schedule-container">
-                <div class="loading">Lade Spielplan...</div>
+            <!-- Upper Half: Schweiz-Spiele -->
+            <div class="schedule-half">
+                <h2>🇨🇭 Nächste Schweiz-Spiele <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: none; font-weight: normal; margin-left: auto;">(iihf.com)</span></h2>
+                <div class="content-scroll" id="swiss-games-container">
+                    <div class="loading">Lade Schweiz-Spiele...</div>
+                </div>
+            </div>
+
+            <!-- Divider Line -->
+            <div style="height: 1px; background: rgba(0, 0, 0, 0.08); margin: 0.75rem 0; flex-shrink: 0;"></div>
+
+            <!-- Lower Half: Past Results -->
+            <div class="schedule-half">
+                <h2>🏆 Spiel-Resultate (Gruppe A) <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: none; font-weight: normal; margin-left: auto;">(srf.ch)</span></h2>
+                <div class="content-scroll" id="past-results-container">
+                    <div class="loading">Lade Resultate...</div>
+                </div>
             </div>
         </div>
     </div>
@@ -203,11 +234,13 @@
                 const data = await response.json();
                 
                 renderNews(data.news);
-                renderSchedule(data.schedule);
+                renderSwissGames(data.schedule.swiss_games);
+                renderPastResults(data.schedule.past_results);
             } catch (error) {
                 console.error(error);
                 document.getElementById('news-container').innerHTML = '<div class="loading">Fehler beim Laden der Daten. Bitte später prüfen.</div>';
-                document.getElementById('schedule-container').innerHTML = '';
+                document.getElementById('swiss-games-container').innerHTML = '';
+                document.getElementById('past-results-container').innerHTML = '';
             }
         }
 
@@ -236,21 +269,74 @@ function renderNews(newsArray) {
             `}).join('');
         }
 
-        function renderSchedule(scheduleArray) {
-            const container = document.getElementById('schedule-container');
-            if(!scheduleArray || scheduleArray.length === 0) {
-                container.innerHTML = '<div class="loading">Keine Spiele gefunden.</div>';
+        function renderSwissGames(gamesArray) {
+            const container = document.getElementById('swiss-games-container');
+            if(!gamesArray || gamesArray.length === 0) {
+                container.innerHTML = '<div class="loading">Keine anstehenden Spiele gefunden.</div>';
                 return;
             }
-            container.innerHTML = scheduleArray.map(game => `
-                <div class="schedule-item">
-                    <div class="teams">${game.team1} vs. ${game.team2}</div>
-                    <div class="match-info">
-                        <div class="match-time">${game.date} - ${game.time}</div>
-                        <div class="match-venue">${game.venue}</div>
+            container.innerHTML = gamesArray.map(game => {
+                const isSwissMatch = true;
+                const borderClass = isSwissMatch ? 'swiss-match' : '';
+                const scoreHtml = game.score 
+                    ? `<div style="font-size: 1.3rem; font-weight: 800; color: var(--accent-red); font-family: monospace; text-align: right; margin-bottom: 2px;">${game.score}</div>` 
+                    : '';
+                
+                return `
+                <div class="schedule-item ${borderClass}" style="gap: 1rem; padding: 0.85rem 1rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem; flex: 1;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn-csd.swisstxt.ch/images/geo/country/flag/medium/${game.team1_country}.png" style="width: 24px; height: 16px; object-fit: contain; border-radius: 2px; border: 1px solid rgba(0,0,0,0.05);" onerror="this.style.display='none'">
+                            <span style="font-weight: 700; font-size: 1.05rem; color: #0f172a;">${game.team1}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn-csd.swisstxt.ch/images/geo/country/flag/medium/${game.team2_country}.png" style="width: 24px; height: 16px; object-fit: contain; border-radius: 2px; border: 1px solid rgba(0,0,0,0.05);" onerror="this.style.display='none'">
+                            <span style="font-weight: 700; font-size: 1.05rem; color: #0f172a;">${game.team2}</span>
+                        </div>
+                    </div>
+                    <div class="match-info" style="text-align: right; display: flex; flex-direction: column; justify-content: center;">
+                        ${scoreHtml}
+                        <div class="match-time" style="color: var(--accent-red); font-weight: bold; font-size: 0.9rem; margin-bottom: 2px;">${game.date_str} - ${game.time}</div>
+                        <div class="match-venue" style="font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">${game.venue}</div>
                     </div>
                 </div>
-            `).join('');
+                `;
+            }).join('');
+        }
+
+        function renderPastResults(gamesArray) {
+            const container = document.getElementById('past-results-container');
+            if(!gamesArray || gamesArray.length === 0) {
+                container.innerHTML = '<div class="loading">Keine Resultate vorhanden.</div>';
+                return;
+            }
+            container.innerHTML = gamesArray.slice(0, 15).map(game => { // Zeige maximal 15 Resultate
+                const isSwissMatch = game.team1 === 'Schweiz' || game.team2 === 'Schweiz';
+                const borderClass = isSwissMatch ? 'swiss-match' : '';
+                const scoreHtml = game.score 
+                    ? `<div style="font-size: 1.3rem; font-weight: 800; color: ${isSwissMatch ? 'var(--accent-red)' : 'var(--accent-blue)'}; font-family: monospace; text-align: right; margin-bottom: 2px;">${game.score}</div>` 
+                    : '';
+                
+                return `
+                <div class="schedule-item ${borderClass}" style="gap: 1rem; padding: 0.85rem 1rem; margin-bottom: 0.75rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem; flex: 1;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn-csd.swisstxt.ch/images/geo/country/flag/medium/${game.team1_country}.png" style="width: 24px; height: 16px; object-fit: contain; border-radius: 2px; border: 1px solid rgba(0,0,0,0.05);" onerror="this.style.display='none'">
+                            <span style="font-weight: 600; font-size: 1rem; color: #0f172a;">${game.team1}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn-csd.swisstxt.ch/images/geo/country/flag/medium/${game.team2_country}.png" style="width: 24px; height: 16px; object-fit: contain; border-radius: 2px; border: 1px solid rgba(0,0,0,0.05);" onerror="this.style.display='none'">
+                            <span style="font-weight: 600; font-size: 1rem; color: #0f172a;">${game.team2}</span>
+                        </div>
+                    </div>
+                    <div class="match-info" style="text-align: right; display: flex; flex-direction: column; justify-content: center;">
+                        ${scoreHtml}
+                        <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500; margin-bottom: 2px;">${game.date_str}</div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">${game.venue}</div>
+                    </div>
+                </div>
+                `;
+            }).join('');
         }
 
         // --- 3. Live-Uhr ---
