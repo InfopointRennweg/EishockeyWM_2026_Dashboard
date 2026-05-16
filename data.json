@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-16 07:30:57",
+    "last_updated": "2026-05-16 12:11:30",
     "news": [
+        {
+            "title": "WM: Am Samstag wartet Lettland - Nati hat Euphorie-Welle erwischt – nun gilt es, sie zu reiten",
+            "date": "16.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/42ca03.webp"
+        },
         {
             "title": "3:1 gegen Titelverteidiger USA - Geflogen, gekämpft, gezittert: Nati-Traumstart an Heim-WM perfekt",
             "date": "15.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/775955.webp"
-        },
-        {
-            "title": "Die Stimmen zum Auftaktsieg - Gänsehaut bei den Spielern: «Das beflügelt uns»",
-            "date": "15.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/38add1c.webp"
         }
     ],
     "schedule": {
@@ -22,8 +22,8 @@
                 "date_str": "Sa, 16. Mai",
                 "time": "12:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Live",
+                "score": "2 : 5",
                 "full_date": "2026-05-16T12:20:00"
             },
             {
