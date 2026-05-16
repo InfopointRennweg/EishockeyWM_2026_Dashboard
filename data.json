@@ -1,31 +1,57 @@
 {
-    "last_updated": "2026-05-15 13:10:49",
+    "last_updated": "2026-05-16 07:30:57",
     "news": [
         {
-            "title": "Erster WM-Gegner der Schweiz - USA: Mit Talent en masse, aber noch ohne Superstar",
+            "title": "3:1 gegen Titelverteidiger USA - Geflogen, gekämpft, gezittert: Nati-Traumstart an Heim-WM perfekt",
             "date": "15.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/d2728a.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/775955.webp"
         },
         {
-            "title": "Schweiz – USA am Freitagabend - Die perfekte Affiche, um die Heim-WM so richtig zu lancieren",
-            "date": "14.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/90ba44.webp"
+            "title": "Die Stimmen zum Auftaktsieg - Gänsehaut bei den Spielern: «Das beflügelt uns»",
+            "date": "15.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/38add1c.webp"
         }
     ],
     "schedule": {
         "today_games": [
             {
-                "team1": "Finnland",
-                "team1_country": "FIN",
-                "team2": "Deutschland",
-                "team2_country": "GER",
-                "date_str": "Fr, 15. Mai",
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Sa, 16. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-16T12:20:00"
+            },
+            {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Sa, 16. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
                 "state": "Planned",
                 "score": null,
-                "full_date": "2026-05-15T16:20:00"
+                "full_date": "2026-05-16T16:20:00"
             },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "Sa, 16. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-16T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "USA",
                 "team1_country": "USA",
@@ -34,11 +60,22 @@
                 "date_str": "Fr, 15. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "1 : 3",
                 "full_date": "2026-05-15T20:20:00"
+            },
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "Deutschland",
+                "team2_country": "GER",
+                "date_str": "Fr, 15. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "3 : 1",
+                "full_date": "2026-05-15T16:20:00"
             }
-        ],
-        "past_results": []
+        ]
     }
 }
