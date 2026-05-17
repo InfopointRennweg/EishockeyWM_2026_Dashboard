@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-16 12:11:30",
+    "last_updated": "2026-05-17 07:56:22",
     "news": [
         {
-            "title": "WM: Am Samstag wartet Lettland - Nati hat Euphorie-Welle erwischt – nun gilt es, sie zu reiten",
+            "title": "WM: 4:2-Erfolg gegen Lettland - Schweiz trotzt Chancenwucher und belohnt sich für Beharrlichkeit",
             "date": "16.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/42ca03.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/6df3f37.webp"
         },
         {
-            "title": "3:1 gegen Titelverteidiger USA - Geflogen, gekämpft, gezittert: Nati-Traumstart an Heim-WM perfekt",
-            "date": "15.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/775955.webp"
+            "title": "Stimmen zum 2. WM-Sieg - Knak: «Stellen wir das ab, gehören wir zu den Topfavoriten»",
+            "date": "16.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/b09f674.webp"
         }
     ],
     "schedule": {
@@ -17,14 +17,52 @@
             {
                 "team1": "Grossbritannien",
                 "team1_country": "GBR",
-                "team2": "Österreich",
-                "team2_country": "AUT",
-                "date_str": "Sa, 16. Mai",
+                "team2": "USA",
+                "team2_country": "USA",
+                "date_str": "So, 17. Mai",
                 "time": "12:20",
                 "venue": "Swiss Life Arena",
-                "state": "Live",
-                "score": "2 : 5",
-                "full_date": "2026-05-16T12:20:00"
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-17T12:20:00"
+            },
+            {
+                "team1": "Österreich",
+                "team1_country": "AUT",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "So, 17. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-17T16:20:00"
+            },
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "So, 17. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-17T20:20:00"
+            }
+        ],
+        "past_results": [
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "Sa, 16. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 2",
+                "full_date": "2026-05-16T20:20:00"
             },
             {
                 "team1": "Ungarn",
@@ -34,24 +72,22 @@
                 "date_str": "Sa, 16. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "1 : 4",
                 "full_date": "2026-05-16T16:20:00"
             },
             {
-                "team1": "Schweiz",
-                "team1_country": "SUI",
-                "team2": "Lettland",
-                "team2_country": "LAT",
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "Österreich",
+                "team2_country": "AUT",
                 "date_str": "Sa, 16. Mai",
-                "time": "20:20",
+                "time": "12:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-16T20:20:00"
-            }
-        ],
-        "past_results": [
+                "state": "Finished",
+                "score": "2 : 5",
+                "full_date": "2026-05-16T12:20:00"
+            },
             {
                 "team1": "USA",
                 "team1_country": "USA",
