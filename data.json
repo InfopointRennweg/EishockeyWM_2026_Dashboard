@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-19 08:43:36",
+    "last_updated": "2026-05-19 14:08:29",
     "news": [
+        {
+            "title": "Nati-Update am Dienstag - Berra litt an Lungenentzündung – Cadieux gewährt Team eine Pause",
+            "date": "19.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/a53e250.webp"
+        },
         {
             "title": "WM: Nati überrennt Deutschland - Traum-Shorthander lanciert nächstes Schweizer Hockey-Fest",
             "date": "18.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/2bafd7.webp"
-        },
-        {
-            "title": "Stimmen zum 3. WM-Sieg - Niederreiter: «Zum Glück kam das 1:0, das hat alles geöffnet»",
-            "date": "18.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/b43057.webp"
         }
     ],
     "schedule": {
