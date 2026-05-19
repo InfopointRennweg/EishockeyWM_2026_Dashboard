@@ -1,31 +1,45 @@
 {
-    "last_updated": "2026-05-18 14:40:21",
+    "last_updated": "2026-05-19 08:43:36",
     "news": [
         {
-            "title": "Nati vor Duell mit Deutschland - Beste Stimmung bei den Schweizern – Berra meldet sich zurück",
+            "title": "WM: Nati überrennt Deutschland - Traum-Shorthander lanciert nächstes Schweizer Hockey-Fest",
             "date": "18.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/a44ea2.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/2bafd7.webp"
         },
         {
-            "title": "Nächster Gegner der Schweiz - Vom Silber-Glanz von 2023 ist bei Deutschland nicht mehr viel da",
+            "title": "Stimmen zum 3. WM-Sieg - Niederreiter: «Zum Glück kam das 1:0, das hat alles geöffnet»",
             "date": "18.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/dceb5b.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/b43057.webp"
         }
     ],
     "schedule": {
         "today_games": [
             {
-                "team1": "Finnland",
-                "team1_country": "FIN",
-                "team2": "USA",
-                "team2_country": "USA",
-                "date_str": "Mo, 18. Mai",
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 19. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Live",
-                "score": "2 : 1",
-                "full_date": "2026-05-18T16:20:00"
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-19T16:20:00"
             },
+            {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Di, 19. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-19T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "Deutschland",
                 "team1_country": "GER",
@@ -34,12 +48,22 @@
                 "date_str": "Mo, 18. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "1 : 6",
                 "full_date": "2026-05-18T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "USA",
+                "team2_country": "USA",
+                "date_str": "Mo, 18. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "6 : 2",
+                "full_date": "2026-05-18T16:20:00"
+            },
             {
                 "team1": "Deutschland",
                 "team1_country": "GER",
