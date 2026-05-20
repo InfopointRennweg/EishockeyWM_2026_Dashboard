@@ -1,31 +1,45 @@
 {
-    "last_updated": "2026-05-19 14:08:29",
+    "last_updated": "2026-05-20 08:40:41",
     "news": [
         {
-            "title": "Nati-Update am Dienstag - Berra litt an Lungenentzündung – Cadieux gewährt Team eine Pause",
-            "date": "19.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/a53e250.webp"
+            "title": "Österreich-Coach Bader - «Irgendwann wird der Tag kommen, an dem wir die Schweiz schlagen»",
+            "date": "20.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/ccc4ef.webp"
         },
         {
-            "title": "WM: Nati überrennt Deutschland - Traum-Shorthander lanciert nächstes Schweizer Hockey-Fest",
-            "date": "18.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/2bafd7.webp"
+            "title": "Polonaise mitten im WM-Spiel - Österreichs Fans machen Laune – auch in Zürich",
+            "date": "20.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/f5b0f4.webp"
         }
     ],
     "schedule": {
         "today_games": [
             {
-                "team1": "Lettland",
-                "team1_country": "LAT",
-                "team2": "Österreich",
-                "team2_country": "AUT",
-                "date_str": "Di, 19. Mai",
+                "team1": "Österreich",
+                "team1_country": "AUT",
+                "team2": "Schweiz",
+                "team2_country": "SUI",
+                "date_str": "Mi, 20. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
                 "state": "Planned",
                 "score": null,
-                "full_date": "2026-05-19T16:20:00"
+                "full_date": "2026-05-20T16:20:00"
             },
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Deutschland",
+                "team2_country": "GER",
+                "date_str": "Mi, 20. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-20T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "Ungarn",
                 "team1_country": "HUN",
@@ -34,12 +48,22 @@
                 "date_str": "Di, 19. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "5 : 0",
                 "full_date": "2026-05-19T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
+            {
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 19. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 3",
+                "full_date": "2026-05-19T16:20:00"
+            },
             {
                 "team1": "Deutschland",
                 "team1_country": "GER",
