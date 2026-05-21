@@ -1,31 +1,45 @@
 {
-    "last_updated": "2026-05-20 14:01:27",
+    "last_updated": "2026-05-21 08:46:22",
     "news": [
         {
-            "title": "USA – GER live auf SRF zwei - Superstar Tkachuk ist da – und gegen Deutschland «ready to go»?",
+            "title": "4. Sieg im 4. Spiel an Heim-WM - 9:0! Beflügelte Nati fegt über müdes Österreich hinweg",
             "date": "20.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/b435754.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/c5a00d.webp"
         },
         {
-            "title": "Eishockey-WM am Dienstag - Österreich bezwingt Lettland – Aufsteiger essen hartes Brot",
-            "date": "19.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/b360aa8.webp"
+            "title": "13 WM-Shutouts - Genoni nach Bestmarke: «Wusste nicht, dass es diesen Rekord gibt»",
+            "date": "20.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/34fe00c.webp"
         }
     ],
     "schedule": {
         "today_games": [
             {
-                "team1": "Österreich",
-                "team1_country": "AUT",
-                "team2": "Schweiz",
-                "team2_country": "SUI",
-                "date_str": "Mi, 20. Mai",
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Do, 21. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
                 "state": "Planned",
                 "score": null,
-                "full_date": "2026-05-20T16:20:00"
+                "full_date": "2026-05-21T16:20:00"
             },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Do, 21. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-21T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "USA",
                 "team1_country": "USA",
@@ -34,12 +48,22 @@
                 "date_str": "Mi, 20. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "4 : 3 nP",
                 "full_date": "2026-05-20T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
+            {
+                "team1": "Österreich",
+                "team1_country": "AUT",
+                "team2": "Schweiz",
+                "team2_country": "SUI",
+                "date_str": "Mi, 20. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "0 : 9",
+                "full_date": "2026-05-20T16:20:00"
+            },
             {
                 "team1": "Ungarn",
                 "team1_country": "HUN",
