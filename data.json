@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-21 08:46:22",
+    "last_updated": "2026-05-21 18:19:38",
     "news": [
+        {
+            "title": "Eishockey-WM am Donnerstag - Norwegen fordert Kanada alles ab – Finnland weiter souverän",
+            "date": "21.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/228e4b6.webp"
+        },
         {
             "title": "4. Sieg im 4. Spiel an Heim-WM - 9:0! Beflügelte Nati fegt über müdes Österreich hinweg",
             "date": "20.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/c5a00d.webp"
-        },
-        {
-            "title": "13 WM-Shutouts - Genoni nach Bestmarke: «Wusste nicht, dass es diesen Rekord gibt»",
-            "date": "20.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/34fe00c.webp"
         }
     ],
     "schedule": {
@@ -22,8 +22,8 @@
                 "date_str": "Do, 21. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "1 : 7",
                 "full_date": "2026-05-21T16:20:00"
             },
             {
@@ -40,6 +40,18 @@
             }
         ],
         "past_results": [
+            {
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Do, 21. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 7",
+                "full_date": "2026-05-21T16:20:00"
+            },
             {
                 "team1": "USA",
                 "team1_country": "USA",
