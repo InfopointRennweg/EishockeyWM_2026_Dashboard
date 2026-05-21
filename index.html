@@ -386,23 +386,30 @@ function renderNews(newsArray) {
         setInterval(updateClock, 1000);
         updateClock();
 
-        // --- 4. Update-Logik (07:30 und 13:30) ---
+        // --- 4. Update-Logik (06:00, 08:30, 14:30 und 18:30) ---
         function scheduleNextReload() {
             const now = new Date();
             
-            // Definiere die beiden Zielzeiten von heute
-            const targetMorning = new Date(now); targetMorning.setHours(7, 30, 0, 0);
-            const targetAfternoon = new Date(now); targetAfternoon.setHours(13, 30, 0, 0);
+            // Definiere die vier Zielzeiten von heute
+            const target1 = new Date(now); target1.setHours(6, 0, 0, 0);
+            const target2 = new Date(now); target2.setHours(8, 30, 0, 0);
+            const target3 = new Date(now); target3.setHours(14, 30, 0, 0);
+            const target4 = new Date(now); target4.setHours(18, 30, 0, 0);
 
-            let nextUpdate;
+            const targets = [target1, target2, target3, target4];
+            let nextUpdate = null;
 
-            if (now < targetMorning) {
-                nextUpdate = targetMorning;
-            } else if (now < targetAfternoon) {
-                nextUpdate = targetAfternoon;
-            } else {
-                // Nächstes Update ist morgen früh um 07:30
-                nextUpdate = new Date(targetMorning);
+            // Finde die nächste Zielzeit, die in der Zukunft liegt
+            for (const t of targets) {
+                if (now < t) {
+                    nextUpdate = t;
+                    break;
+                }
+            }
+
+            // Falls alle Zeiten von heute vorbei sind → morgen 06:00
+            if (!nextUpdate) {
+                nextUpdate = new Date(target1);
                 nextUpdate.setDate(nextUpdate.getDate() + 1);
             }
 
