@@ -1,31 +1,45 @@
 {
-    "last_updated": "2026-05-21 18:19:38",
+    "last_updated": "2026-05-22 07:36:34",
     "news": [
         {
-            "title": "Eishockey-WM am Donnerstag - Norwegen fordert Kanada alles ab – Finnland weiter souverän",
+            "title": "WM: Viertelfinal-Quali ist fix - Dominante Schweizer mühen sich zum Pflichtsieg gegen Briten",
             "date": "21.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/228e4b6.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/0c750b.webp"
         },
         {
-            "title": "4. Sieg im 4. Spiel an Heim-WM - 9:0! Beflügelte Nati fegt über müdes Österreich hinweg",
-            "date": "20.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/c5a00d.webp"
+            "title": "NHL-Stürmer in Zürich - Fialas Hoffnung auf Einsatz an Heim-WM starb erst letzte Woche",
+            "date": "21.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/d10ee7.webp"
         }
     ],
     "schedule": {
         "today_games": [
             {
-                "team1": "Lettland",
-                "team1_country": "LAT",
-                "team2": "Finnland",
-                "team2_country": "FIN",
-                "date_str": "Do, 21. Mai",
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Fr, 22. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Finished",
-                "score": "1 : 7",
-                "full_date": "2026-05-21T16:20:00"
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-22T16:20:00"
             },
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Fr, 22. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-22T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "Schweiz",
                 "team1_country": "SUI",
@@ -34,12 +48,10 @@
                 "date_str": "Do, 21. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "4 : 1",
                 "full_date": "2026-05-21T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
             {
                 "team1": "Lettland",
                 "team1_country": "LAT",
