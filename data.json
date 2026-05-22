@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-05-22 15:36:20",
+    "last_updated": "2026-05-22 18:15:33",
     "news": [
         {
             "title": "Nati-Update am Freitag - Suter zurück im Training – viele Spieler pausieren",
@@ -7,9 +7,9 @@
             "image": "https://www.srf.ch/static/cms/images/320ws/e6db5b.webp"
         },
         {
-            "title": "Diverse Viertelfinal-Szenarien - So klar die Hierarchie in Zürich, so ungewiss jene in Freiburg",
+            "title": "Eishockey-WM am Freitag - Deutschland schiesst sich Frust von der Seele – Kanada glanzlos",
             "date": "22.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/108d32.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/6a3773.webp"
         }
     ],
     "schedule": {
@@ -22,8 +22,8 @@
                 "date_str": "Fr, 22. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Live",
-                "score": "2 : 0",
+                "state": "Finished",
+                "score": "6 : 2",
                 "full_date": "2026-05-22T16:20:00"
             },
             {
@@ -40,6 +40,18 @@
             }
         ],
         "past_results": [
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Fr, 22. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "6 : 2",
+                "full_date": "2026-05-22T16:20:00"
+            },
             {
                 "team1": "Schweiz",
                 "team1_country": "SUI",
