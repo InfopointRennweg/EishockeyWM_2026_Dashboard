@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-22 09:56:38",
+    "last_updated": "2026-05-22 15:36:20",
     "news": [
         {
-            "title": "WM: Viertelfinal-Quali ist fix - Dominante Schweizer mühen sich zum Pflichtsieg gegen Briten",
-            "date": "21.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/0c750b.webp"
+            "title": "Nati-Update am Freitag - Suter zurück im Training – viele Spieler pausieren",
+            "date": "22.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/e6db5b.webp"
         },
         {
-            "title": "NHL-Stürmer in Zürich - Fialas Hoffnung auf Einsatz an Heim-WM starb erst letzte Woche",
-            "date": "21.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/d10ee7.webp"
+            "title": "Diverse Viertelfinal-Szenarien - So klar die Hierarchie in Zürich, so ungewiss jene in Freiburg",
+            "date": "22.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/108d32.webp"
         }
     ],
     "schedule": {
@@ -22,8 +22,8 @@
                 "date_str": "Fr, 22. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Live",
+                "score": "2 : 0",
                 "full_date": "2026-05-22T16:20:00"
             },
             {
