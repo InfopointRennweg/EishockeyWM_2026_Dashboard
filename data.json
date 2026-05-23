@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-23 14:09:48",
+    "last_updated": "2026-05-23 17:33:38",
     "news": [
         {
-            "title": "Eishockey-WM am Samstag - Lettland besiegt die USA und bringt die Spannung zurück",
+            "title": "Josi bei 9:0-Sieg mit Hattrick - Wie in Herning, so in Zürich: Schweiz deklassiert Ungarn erneut",
             "date": "23.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/f28eb6.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/ab5ecd.webp"
         },
         {
-            "title": "Eishockey-WM am Freitag - Finnland schliesst zu Nati auf – 1. Sieg für Deutschland",
-            "date": "22.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/f16bcde.webp"
+            "title": "Schnellster WM-Hattrick - Josi: «Die ersten beiden Tore waren glücklich»",
+            "date": "23.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/b62e3b8.webp"
         }
     ],
     "schedule": {
@@ -34,8 +34,8 @@
                 "date_str": "Sa, 23. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "9 : 0",
                 "full_date": "2026-05-23T16:20:00"
             },
             {
@@ -52,6 +52,18 @@
             }
         ],
         "past_results": [
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Sa, 23. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "9 : 0",
+                "full_date": "2026-05-23T16:20:00"
+            },
             {
                 "team1": "Lettland",
                 "team1_country": "LAT",
