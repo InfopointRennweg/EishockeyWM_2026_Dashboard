@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-24 14:08:33",
+    "last_updated": "2026-05-24 17:31:28",
     "news": [
+        {
+            "title": "Eishockey-WM am Sonntag - Briten steigen nach Klatsche ab – Italien punktet gegen Dänemark",
+            "date": "24.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/a6e05c.webp"
+        },
         {
             "title": "Keine Teilnahme an Heim-WM - Der Nacken machte Siegenthaler einen Strich durch die Rechnung",
             "date": "24.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/6ddf8c.webp"
-        },
-        {
-            "title": "Josi bei 9:0-Sieg mit Hattrick - Wie in Herning, so in Zürich: Schweiz deklassiert Ungarn erneut",
-            "date": "23.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/ab5ecd.webp"
         }
     ],
     "schedule": {
@@ -22,8 +22,8 @@
                 "date_str": "So, 24. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "0 : 6",
                 "full_date": "2026-05-24T16:20:00"
             },
             {
@@ -40,6 +40,18 @@
             }
         ],
         "past_results": [
+            {
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "So, 24. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "0 : 6",
+                "full_date": "2026-05-24T16:20:00"
+            },
             {
                 "team1": "Österreich",
                 "team1_country": "AUT",
