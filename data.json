@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-05-23 17:33:38",
+    "last_updated": "2026-05-24 06:53:47",
     "news": [
         {
             "title": "Josi bei 9:0-Sieg mit Hattrick - Wie in Herning, so in Zürich: Schweiz deklassiert Ungarn erneut",
@@ -15,29 +15,31 @@
     "schedule": {
         "today_games": [
             {
-                "team1": "Lettland",
-                "team1_country": "LAT",
-                "team2": "USA",
-                "team2_country": "USA",
-                "date_str": "Sa, 23. Mai",
-                "time": "12:20",
-                "venue": "Swiss Life Arena",
-                "state": "Finished",
-                "score": "4 : 2",
-                "full_date": "2026-05-23T12:20:00"
-            },
-            {
-                "team1": "Schweiz",
-                "team1_country": "SUI",
-                "team2": "Ungarn",
-                "team2_country": "HUN",
-                "date_str": "Sa, 23. Mai",
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "So, 24. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Finished",
-                "score": "9 : 0",
-                "full_date": "2026-05-23T16:20:00"
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-24T16:20:00"
             },
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "So, 24. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-24T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "Österreich",
                 "team1_country": "AUT",
@@ -46,12 +48,10 @@
                 "date_str": "Sa, 23. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "2 : 6",
                 "full_date": "2026-05-23T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
             {
                 "team1": "Schweiz",
                 "team1_country": "SUI",
