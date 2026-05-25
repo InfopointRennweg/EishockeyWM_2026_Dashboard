@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-05-24 17:31:28",
+    "last_updated": "2026-05-25 08:11:24",
     "news": [
         {
-            "title": "Eishockey-WM am Sonntag - Briten steigen nach Klatsche ab – Italien punktet gegen Dänemark",
+            "title": "Eishockey-WM am Sonntag - Kanadier drehen im Schlussdrittel auf – Finnland bleibt makellos",
             "date": "24.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/a6e05c.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/9521ad.webp"
         },
         {
             "title": "Keine Teilnahme an Heim-WM - Der Nacken machte Siegenthaler einen Strich durch die Rechnung",
@@ -15,17 +15,31 @@
     "schedule": {
         "today_games": [
             {
-                "team1": "Grossbritannien",
-                "team1_country": "GBR",
-                "team2": "Lettland",
-                "team2_country": "LAT",
-                "date_str": "So, 24. Mai",
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Mo, 25. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Finished",
-                "score": "0 : 6",
-                "full_date": "2026-05-24T16:20:00"
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-25T16:20:00"
             },
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Mo, 25. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-25T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "Finnland",
                 "team1_country": "FIN",
@@ -34,12 +48,10 @@
                 "date_str": "So, 24. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "5 : 2",
                 "full_date": "2026-05-24T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
             {
                 "team1": "Grossbritannien",
                 "team1_country": "GBR",
