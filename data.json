@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-25 08:11:24",
+    "last_updated": "2026-05-25 10:56:26",
     "news": [
+        {
+            "title": "Performance Coach der Nati - Dank Schwitter bleiben Spieler physisch und psychisch in Balance",
+            "date": "25.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/b68fd0.webp"
+        },
         {
             "title": "Eishockey-WM am Sonntag - Kanadier drehen im Schlussdrittel auf – Finnland bleibt makellos",
             "date": "24.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/9521ad.webp"
-        },
-        {
-            "title": "Keine Teilnahme an Heim-WM - Der Nacken machte Siegenthaler einen Strich durch die Rechnung",
-            "date": "24.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/6ddf8c.webp"
         }
     ],
     "schedule": {
