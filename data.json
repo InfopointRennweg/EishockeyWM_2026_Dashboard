@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-25 15:37:43",
+    "last_updated": "2026-05-25 18:09:27",
     "news": [
         {
-            "title": "Performance Coach der Nati - Dank Schwitter bleiben Spieler physisch und psychisch in Balance",
+            "title": "WM: Härtetest gegen Finnland - Gala kann die Nati – kann sie auch «dreckig»?",
             "date": "25.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/b68fd0.webp"
+            "image": "https://www.srf.ch/static/cms/images/320ws/6afca3.webp"
         },
         {
-            "title": "Eishockey-WM am Sonntag - Kanadier drehen im Schlussdrittel auf – Finnland bleibt makellos",
-            "date": "24.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/9521ad.webp"
+            "title": "Eishockey-WM am Montag - Norwegen steht im Viertelfinal – USA können weiter hoffen",
+            "date": "25.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/596a17.webp"
         }
     ],
     "schedule": {
@@ -22,8 +22,8 @@
                 "date_str": "Mo, 25. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Live",
-                "score": "4 : 1",
+                "state": "Finished",
+                "score": "7 : 3",
                 "full_date": "2026-05-25T16:20:00"
             },
             {
@@ -40,6 +40,18 @@
             }
         ],
         "past_results": [
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Mo, 25. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "7 : 3",
+                "full_date": "2026-05-25T16:20:00"
+            },
             {
                 "team1": "Finnland",
                 "team1_country": "FIN",
