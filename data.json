@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-05-26 16:26:39",
+    "last_updated": "2026-05-26 18:41:43",
     "news": [
         {
             "title": "Finnlands NHL-Star an der WM - Malgin schwärmt von Barkov: «Er kann einfach alles»",
@@ -7,9 +7,9 @@
             "image": "https://www.srf.ch/static/cms/images/320ws/3a37bc.webp"
         },
         {
-            "title": "WM: Härtetest gegen Finnland - Gala kann die Nati – kann sie auch «dreckig»?",
-            "date": "25.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/6afca3.webp"
+            "title": "Eishockey-WM am Dienstag - Schweden und die USA bei letzter Gelegenheit im Viertelfinal",
+            "date": "26.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/bc4f28.webp"
         }
     ],
     "schedule": {
@@ -34,7 +34,7 @@
                 "date_str": "Di, 26. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Live",
+                "state": "Finished",
                 "score": "4 : 1",
                 "full_date": "2026-05-26T16:20:00"
             },
@@ -46,12 +46,24 @@
                 "date_str": "Di, 26. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Live",
+                "score": "2 : 0",
                 "full_date": "2026-05-26T20:20:00"
             }
         ],
         "past_results": [
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 26. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 1",
+                "full_date": "2026-05-26T16:20:00"
+            },
             {
                 "team1": "Ungarn",
                 "team1_country": "HUN",
