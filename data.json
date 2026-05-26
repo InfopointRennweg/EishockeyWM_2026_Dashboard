@@ -1,31 +1,57 @@
 {
-    "last_updated": "2026-05-25 18:09:27",
+    "last_updated": "2026-05-26 07:35:31",
     "news": [
         {
-            "title": "WM: Härtetest gegen Finnland - Gala kann die Nati – kann sie auch «dreckig»?",
-            "date": "25.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/6afca3.webp"
-        },
-        {
-            "title": "Eishockey-WM am Montag - Norwegen steht im Viertelfinal – USA können weiter hoffen",
+            "title": "Eishockey-WM am Montag - Norwegen steht im Viertelfinal – Italien ist zweiter Absteiger",
             "date": "25.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/596a17.webp"
+        },
+        {
+            "title": "Performance Coach der Nati - Dank Schwitter bleiben Spieler physisch und psychisch in Balance",
+            "date": "25.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/b68fd0.webp"
         }
     ],
     "schedule": {
         "today_games": [
             {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "Di, 26. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-26T12:20:00"
+            },
+            {
                 "team1": "USA",
                 "team1_country": "USA",
-                "team2": "Ungarn",
-                "team2_country": "HUN",
-                "date_str": "Mo, 25. Mai",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 26. Mai",
                 "time": "16:20",
                 "venue": "Swiss Life Arena",
-                "state": "Finished",
-                "score": "7 : 3",
-                "full_date": "2026-05-25T16:20:00"
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-26T16:20:00"
             },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Di, 26. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Planned",
+                "score": null,
+                "full_date": "2026-05-26T20:20:00"
+            }
+        ],
+        "past_results": [
             {
                 "team1": "Deutschland",
                 "team1_country": "GER",
@@ -34,12 +60,10 @@
                 "date_str": "Mo, 25. Mai",
                 "time": "20:20",
                 "venue": "Swiss Life Arena",
-                "state": "Planned",
-                "score": null,
+                "state": "Finished",
+                "score": "6 : 3",
                 "full_date": "2026-05-25T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
             {
                 "team1": "USA",
                 "team1_country": "USA",
