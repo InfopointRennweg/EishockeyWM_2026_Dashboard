@@ -1,15 +1,15 @@
 {
-    "last_updated": "2026-05-27 16:24:18",
+    "last_updated": "2026-05-27 18:38:32",
     "news": [
+        {
+            "title": "WM-Viertelfinal gegen Schweden - Direktbilanz spricht nicht für Schweiz, dafür sonst umso mehr",
+            "date": "27.05.2026",
+            "image": "https://www.srf.ch/static/cms/images/320ws/11aa33.webp"
+        },
         {
             "title": "WM: 4:2 in Duell auf Augenhöhe - Nati besteht hitzigen Härtetest gegen Finnen und holt Gruppensieg",
             "date": "26.05.2026",
             "image": "https://www.srf.ch/static/cms/images/320ws/bc52c8.webp"
-        },
-        {
-            "title": "WM-Zwischenfazit des Direktors - Weibel: «Wir haben das Publikum hinter uns – die Energie ist da»",
-            "date": "27.05.2026",
-            "image": "https://www.srf.ch/static/cms/images/320ws/5306a07.webp"
         }
     ],
     "schedule": {
