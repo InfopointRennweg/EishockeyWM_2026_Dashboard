@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-09-07 20:04:55",
+    "last_updated": "2026-09-08 08:24:50",
     "news": [
         {
             "title": "Empfang der Eishockey-Nati - Josi: «Es war ein unvergessliches Erlebnis»",
@@ -15,16 +15,354 @@
     "schedule": {
         "today_games": [
             {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "Di, 26. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 8",
+                "full_date": "2026-05-26T12:20:00"
+            },
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 26. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 1",
+                "full_date": "2026-05-26T16:20:00"
+            },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Di, 26. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 2",
+                "full_date": "2026-05-26T20:20:00"
+            }
+        ],
+        "past_results": [
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Di, 26. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 2",
+                "full_date": "2026-05-26T20:20:00"
+            },
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 26. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 1",
+                "full_date": "2026-05-26T16:20:00"
+            },
+            {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "Di, 26. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 8",
+                "full_date": "2026-05-26T12:20:00"
+            },
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Mo, 25. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "6 : 3",
+                "full_date": "2026-05-25T20:20:00"
+            },
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Mo, 25. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "7 : 3",
+                "full_date": "2026-05-25T16:20:00"
+            },
+            {
                 "team1": "Finnland",
                 "team1_country": "FIN",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "So, 24. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "5 : 2",
+                "full_date": "2026-05-24T20:20:00"
+            },
+            {
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "So, 24. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "0 : 6",
+                "full_date": "2026-05-24T16:20:00"
+            },
+            {
+                "team1": "Österreich",
+                "team1_country": "AUT",
                 "team2": "Deutschland",
                 "team2_country": "GER",
-                "date_str": "Fr, 15. Mai",
+                "date_str": "Sa, 23. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "2 : 6",
+                "full_date": "2026-05-23T20:20:00"
+            },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Sa, 23. Mai",
                 "time": "16:20",
-                "venue": "Swiss Life Arena, Zürich",
-                "state": "Planned",
-                "score": null,
-                "full_date": "2026-05-15T16:20:00"
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "9 : 0",
+                "full_date": "2026-05-23T16:20:00"
+            },
+            {
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "USA",
+                "team2_country": "USA",
+                "date_str": "Sa, 23. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 2",
+                "full_date": "2026-05-23T12:20:00"
+            },
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Fr, 22. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 0",
+                "full_date": "2026-05-22T20:20:00"
+            },
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "Fr, 22. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "6 : 2",
+                "full_date": "2026-05-22T16:20:00"
+            },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Do, 21. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 1",
+                "full_date": "2026-05-21T20:20:00"
+            },
+            {
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Do, 21. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 7",
+                "full_date": "2026-05-21T16:20:00"
+            },
+            {
+                "team1": "USA",
+                "team1_country": "USA",
+                "team2": "Deutschland",
+                "team2_country": "GER",
+                "date_str": "Mi, 20. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 3 nP",
+                "full_date": "2026-05-20T20:20:00"
+            },
+            {
+                "team1": "Österreich",
+                "team1_country": "AUT",
+                "team2": "Schweiz",
+                "team2_country": "SUI",
+                "date_str": "Mi, 20. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "0 : 9",
+                "full_date": "2026-05-20T16:20:00"
+            },
+            {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Grossbritannien",
+                "team2_country": "GBR",
+                "date_str": "Di, 19. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "5 : 0",
+                "full_date": "2026-05-19T20:20:00"
+            },
+            {
+                "team1": "Lettland",
+                "team1_country": "LAT",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Di, 19. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 3",
+                "full_date": "2026-05-19T16:20:00"
+            },
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Schweiz",
+                "team2_country": "SUI",
+                "date_str": "Mo, 18. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 6",
+                "full_date": "2026-05-18T20:20:00"
+            },
+            {
+                "team1": "Finnland",
+                "team1_country": "FIN",
+                "team2": "USA",
+                "team2_country": "USA",
+                "date_str": "Mo, 18. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "6 : 2",
+                "full_date": "2026-05-18T16:20:00"
+            },
+            {
+                "team1": "Deutschland",
+                "team1_country": "GER",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "So, 17. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "0 : 2",
+                "full_date": "2026-05-17T20:20:00"
+            },
+            {
+                "team1": "Österreich",
+                "team1_country": "AUT",
+                "team2": "Ungarn",
+                "team2_country": "HUN",
+                "date_str": "So, 17. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 2",
+                "full_date": "2026-05-17T16:20:00"
+            },
+            {
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "USA",
+                "team2_country": "USA",
+                "date_str": "So, 17. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 5",
+                "full_date": "2026-05-17T12:20:00"
+            },
+            {
+                "team1": "Schweiz",
+                "team1_country": "SUI",
+                "team2": "Lettland",
+                "team2_country": "LAT",
+                "date_str": "Sa, 16. Mai",
+                "time": "20:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "4 : 2",
+                "full_date": "2026-05-16T20:20:00"
+            },
+            {
+                "team1": "Ungarn",
+                "team1_country": "HUN",
+                "team2": "Finnland",
+                "team2_country": "FIN",
+                "date_str": "Sa, 16. Mai",
+                "time": "16:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 4",
+                "full_date": "2026-05-16T16:20:00"
+            },
+            {
+                "team1": "Grossbritannien",
+                "team1_country": "GBR",
+                "team2": "Österreich",
+                "team2_country": "AUT",
+                "date_str": "Sa, 16. Mai",
+                "time": "12:20",
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "2 : 5",
+                "full_date": "2026-05-16T12:20:00"
             },
             {
                 "team1": "USA",
@@ -33,13 +371,11 @@
                 "team2_country": "SUI",
                 "date_str": "Fr, 15. Mai",
                 "time": "20:20",
-                "venue": "Swiss Life Arena, Zürich",
-                "state": "Planned",
-                "score": null,
+                "venue": "Swiss Life Arena",
+                "state": "Finished",
+                "score": "1 : 3",
                 "full_date": "2026-05-15T20:20:00"
-            }
-        ],
-        "past_results": [
+            },
             {
                 "team1": "Finnland",
                 "team1_country": "FIN",
@@ -47,20 +383,10 @@
                 "team2_country": "GER",
                 "date_str": "Fr, 15. Mai",
                 "time": "16:20",
-                "venue": "Swiss Life Arena, Zürich",
+                "venue": "Swiss Life Arena",
                 "state": "Finished",
-                "score": "3 : 2"
-            },
-            {
-                "team1": "Lettland",
-                "team1_country": "LAT",
-                "team2": "Österreich",
-                "team2_country": "AUT",
-                "date_str": "Fr, 15. Mai",
-                "time": "16:20",
-                "venue": "Swiss Life Arena, Zürich",
-                "state": "Finished",
-                "score": "1 : 2"
+                "score": "3 : 1",
+                "full_date": "2026-05-15T16:20:00"
             }
         ]
     }
